@@ -1,0 +1,1 @@
+./.venv/Scripts/pyinstaller --noconfirm --onefile --console --name "SoundSwitcher" --clean "./main.py"
