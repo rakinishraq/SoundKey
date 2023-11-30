@@ -9,6 +9,15 @@
 - shortcut compatible with fullscreen apps, escape to close
 - can be bound to shortcut (detailed below)
 
+### installation with venv
+0. install [python 3.12](https://www.python.org/downloads/)
+    - enable "Add application directory to your system path"
+1. Clone the repo then open a terminal session in the folder or use `cd <path-to-Prisma>/Prisma`
+    - for the former, shift-right click in an empty area in the folder, click Open Powershell window here
+2. Execute `python -m venv .venv` to create a virtual environment
+3. Install all the required module with `./.venv/Scripts/pip.exe install sv_ttk`
+4. To run from source: Execute `./LAUNCH.vbs` or `./.venv/Scripts/python.exe main.py <ARGUMENTS>`
+
 ### bind to shortcut (+ hide admin popup)
 - `!w` = Alt+W
 - `+a` = Shift+A
