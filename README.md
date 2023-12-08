@@ -20,16 +20,12 @@
 4. To run from source: Execute `./LAUNCH.vbs` or `./.venv/Scripts/python.exe main.py <ARGUMENTS>`
 
 ### bind to shortcut (+ hide admin popup)
-- `!w` = Alt+W
-- `+a` = Shift+A
-- `^s` = Ctrl+S
-- `;d` = Win+D
 
 1. install [AutoHotkey v2](https://www.autohotkey.com/download/ahk-v2.exe)
-2. in the AutoHotkey Dash window, click New Script then the top-right folder search icon
-3. new shortcut in start menu:
-target: "C:\Program Files\AutoHotkey\v2\AutoHotkey64_UIA.exe" "D:\Projects\soundswitcher\shortcut.ahk"
-start in: "C:\Program Files\AutoHotkey\v2"
+2. open startup folder (win+R, type `shell:startup`, press enter)
+3. right click > create shortcut:
+    - target: `"C:\Program Files\AutoHotkey\v2\AutoHotkey64_UIA.exe" "D:\Projects\soundswitcher\shortcut.ahk"`
+    - start in: `"C:\Program Files\AutoHotkey\v2"`
 
 ### addresses problems
 - "Sound Mixer" doesnt set default communication microphone, just default microphone
