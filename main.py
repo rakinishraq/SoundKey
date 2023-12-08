@@ -2,6 +2,10 @@ import ctypes, sys, subprocess, argparse, os
 from pprint import pprint
 import gui
 import configparser
+import chime
+
+chime.theme('material')
+chime.info()
 
 config = configparser.ConfigParser()
 config.read('config.ini')

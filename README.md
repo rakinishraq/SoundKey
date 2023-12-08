@@ -8,6 +8,7 @@
     - `LAUNCH.vbs` is a decent method to run a Python file without showing a window
 - shortcut compatible with fullscreen apps, escape to close
 - can be bound to shortcut (detailed below)
+- hides currently default device
 
 ### installation with venv
 0. install [python 3.12](https://www.python.org/downloads/)
@@ -24,17 +25,11 @@
 - `^s` = Ctrl+S
 - `;d` = Win+D
 
-1. [install AutoHotkey v1](https://www.autohotkey.com/download/ahk-install.exe) making sure all context menu related options are enabled if present
-2. ctrl+R to open Run, enter `shell:startup`
-3. right-click > Show more options > New > AutoHotkey Script, enter any name with Empty selected and click Edit
-4. enter the following, replace !v and path:
-```ahk
-#Requires AutoHotkey v1
-!f::Run, D:\Projects\soundswitcher\LAUNCH.vbs
-```
-5. right-click `AnyName.ahk` > Show more options > Compile Script (GUI) > Change Base File to any `v1*.exe` > Convert
-5. right-click > Show more options > Proprties then Compatibility tab > Run this program as an admin
-6. double-click `AnyName.ahk`
+1. install [AutoHotkey v2](https://www.autohotkey.com/download/ahk-v2.exe)
+2. in the AutoHotkey Dash window, click New Script then the top-right folder search icon
+3. new shortcut in start menu:
+target: "C:\Program Files\AutoHotkey\v2\AutoHotkey64_UIA.exe" "D:\Projects\soundswitcher\shortcut.ahk"
+start in: "C:\Program Files\AutoHotkey\v2"
 
 ### addresses problems
 - "Sound Mixer" doesnt set default communication microphone, just default microphone

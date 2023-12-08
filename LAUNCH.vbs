@@ -2,7 +2,7 @@ Set objShell = WScript.CreateObject("WScript.Shell")
 Set objFSO = CreateObject("Scripting.FileSystemObject")
 
 scriptDir = objFSO.GetParentFolderName(WScript.ScriptFullName)
-command = objFSO.BuildPath(scriptDir, ".venv\Scripts\python.exe") & " " & objFSO.BuildPath(scriptDir, "main.py")
+command = objFSO.BuildPath(scriptDir, ".venv\Scripts\pythonw.exe") & " " & objFSO.BuildPath(scriptDir, "main.py")
 
 objShell.CurrentDirectory = scriptDir
 
