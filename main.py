@@ -1,14 +1,15 @@
 import ctypes, sys, subprocess, argparse, os
+import gui, configparser, chime
 from pprint import pprint
-import gui
-import configparser
-import chime
 
 chime.theme('material')
 chime.info()
 
 config = configparser.ConfigParser()
 config.read('config.ini')
+
+startupinfo = subprocess.STARTUPINFO()
+startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
 
 
 def is_admin():
@@ -81,7 +82,7 @@ def main(args):
     # get list
     dir_path = os.path.dirname(os.path.realpath(__file__))
     script_path = os.path.join(dir_path, "audio.ps1")
-    result = subprocess.run(["powershell", "-File", script_path], capture_output=True, text=True)
+    result = subprocess.run(["powershell", "-File", script_path], capture_output=True, text=True, startupinfo=startupinfo)
     result = parse_output(result.stdout)
     if args.verbose: pprint(result)
 
@@ -105,7 +106,7 @@ def main(args):
 
         main(args)
     else:
-        subprocess.run(["powershell", "-File", script_path, input_index])
+        subprocess.run(["powershell", "-File", script_path, input_index], startupinfo=startupinfo)
 
         
 
