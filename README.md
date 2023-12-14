@@ -10,6 +10,7 @@
 - can be bound to shortcut (detailed below)
 - hides currently default device
 
+
 ### installation with venv
 0. install [python 3.12](https://www.python.org/downloads/)
     - enable "Add application directory to your system path"
@@ -19,6 +20,7 @@
 3. Install all the required module with `./.venv/Scripts/pip.exe install sv_ttk`
 4. To run from source: Execute `./LAUNCH.vbs` or `./.venv/Scripts/python.exe main.py <ARGUMENTS>`
 
+
 ### bind to shortcut (+ hide admin popup)
 
 1. install [AutoHotkey v2](https://www.autohotkey.com/download/ahk-v2.exe)
@@ -27,9 +29,11 @@
     - target: `"C:\Program Files\AutoHotkey\v2\AutoHotkey64_UIA.exe" "D:\Projects\soundswitcher\shortcut.ahk"`
     - start in: `"C:\Program Files\AutoHotkey\v2"`
 
+
 ### addresses problems
 - "Sound Mixer" doesnt set default communication microphone, just default microphone
 - all audio device lists in Windows are often too bloated (nickname N/A to hide)
+
 
 ### philosophy
 

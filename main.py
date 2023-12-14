@@ -53,7 +53,7 @@ def simplify(parsed, no_print=False):
             default, default_comm, name, index, is_output = \
                 "X" if device['Default'] == 'True' else "_", \
                 "X" if device['DefaultCommunication'] == 'True' else "_", \
-                config['config'].get(device['Name'], device['Name']), \
+                config['alias'].get(device['Name'], device['Name']), \
                 device['Index'], device['Type'] == 'Playback'
             
             if not is_output and not heading_shown:
