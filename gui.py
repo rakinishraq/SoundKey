@@ -60,7 +60,8 @@ def main(data):
     root.bind("<Escape>", lambda _e: closer(root))
     root.bind("<FocusOut>", lambda _e: closer(root))
 
-    #root.wm_attributes('-transparentcolor', "#1c1c1c")
+    if config.getboolean('gui', 'transparent'):
+        root.wm_attributes('-transparentcolor', "#1c1c1c")
     root.wm_attributes("-topmost", 1)
 
     # Create two frames for the two grids
