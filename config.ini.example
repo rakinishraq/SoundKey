@@ -1,0 +1,13 @@
+[gui]
+width = 700
+height = 200
+columns = 3
+gap = 6
+
+[alias]
+spdif interface (realtek usb2.0 audio) = 5.1 Optical
+virtual mic (virtual mic for audiorelay) = AudioRelay
+lg ultrawide (nvidia high definition audio) = N/A
+speakers (steam streaming speakers) = N/A
+speakers (steam streaming microphone) = N/A
+headset microphone (oculus virtual audio device) = Oculus

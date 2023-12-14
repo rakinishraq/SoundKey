@@ -18,7 +18,8 @@
     - for the former, shift-right click in an empty area in the folder, click Open Powershell window here
 2. Execute `python -m venv .venv` to create a virtual environment
 3. Install all the required module with `./.venv/Scripts/pip.exe install sv_ttk`
-4. To run from source: Execute `./LAUNCH.vbs` or `./.venv/Scripts/python.exe main.py <ARGUMENTS>`
+4. Rename "config.ini.example" to "config.ini" (and edit with any text editor if desired)
+5. To run from source: Execute `./LAUNCH.vbs` or `./.venv/Scripts/python.exe main.py <ARGUMENTS>`
 
 
 ### bind to shortcut (+ hide admin popup)
