@@ -1,9 +1,16 @@
+# Ava
+Ava is an overlay hotkey that lets you change your sound input and output device  quickly and easily!
+
+This was made because Windows' built-in methods to do so are terrible.
+- "Sound Mixer" doesnt set default communication microphone, just default microphone
+- audio device lists in Windows are often bloated (nickname to shorten them/hide them)
+
 ### why?
-- allows hideing an audio device from this app without hiding it from other Windows menus
-    - nickname any app "N/A" to hide it from the list on the next instance
-- allows nicknaming
-    - right-click any entry to nickname it
-- allows CLI use, check `./LAUNCH.vbs --help` for details
+- Allows nicknaming your device to shorten its name
+    - Right-click any entry to nickname it
+- Allows hiding an audio device from this app without hiding it from other Windows menus
+    - Nickname any app "N/A" to hide it from the list (starting from the next instance)
+- Allows CLI use, check `./LAUNCH.vbs --help` for details
     - `audio.ps1` works as standalone
     - `LAUNCH.vbs` is a decent method to run a Python file without showing a window
 - shortcut compatible with fullscreen apps, escape to close
@@ -31,16 +38,14 @@
     - start in: `"C:\Program Files\AutoHotkey\v2"`
 
 
-### addresses problems
-- "Sound Mixer" doesnt set default communication microphone, just default microphone
-- all audio device lists in Windows are often too bloated (nickname N/A to hide)
+### Philosophy
 
-
-### philosophy
-
-speedrun a minimalist quick-access interface that also retains all of the necessary functionality provided by vanilla methods like "Volume Mixer", "Change System Sounds" and "Win+Ctrl+V"  
+speedrun a minimalist quick-access interface that also retains all of the necessary functionality provided by vanilla methods like "Volume Mixer", "Change System Sounds" and "Win+Ctrl+V", none of which display over fullscreen apps like games. often, overlays of that sort   
 powershell script left as standalone for future better gui's  
 besides readme changes, tkinter gui, python cli and powershell scripts written in < 18hrs
+
+**what i learned:**
+- 
 
 assumptions:
 - audio.ps1 will always print all outputs before printing input (always been true so far)
@@ -48,4 +53,4 @@ assumptions:
 handled:
 - indexes not lining up as n+1 always (meaning not necessarily ordered)
 - invalid index entered (re-execute)
-- sound devices changing before re-execution (calculate list again instead of saving)
+- sound devices changing before re-execution (calculate list again instead of saving)config.get('daemon', 'hotkey')vv
