@@ -19,7 +19,7 @@ TODO: hide admin window, CLI help
     - open `nircmd.exe` in the extracted folder
     - click `Copy to Windows Directory` then `Yes`
     - restart PC to ensure proper installation
-2. download and extract the repo
+2. download and extract [this repo's contents](https://github.com/rakinishraq/ava/archive/refs/heads/master.zip)
 3. open a Powershell window in this folder
     - method 1: open Powershell from Windows menu and enter `cd C:/PATH/TO/AVA
     - method 2: open from windows file explorer by shift-right click in an empty area in the Ava folder, click Open Powershell window here
