@@ -89,7 +89,7 @@ def main(args=None):
     next_index = -1
     if (old_name := get_default(args.type)) in devices:
         old_index = devices.index(old_name)
-        if config.start_from_top:
+        if not config.start_from_top:
             next_index = old_index
     else:
         old_index = len(devices) - 1
@@ -115,5 +115,9 @@ def main(args=None):
                 break
 
 if __name__ == "__main__":
-    default_args = ['output']
-    main(sys.argv[1:] if len(sys.argv) > 1 else default_args)
+    try:
+        default_args = ['output']
+        main(sys.argv[1:] if len(sys.argv) > 1 else default_args)
+    except Exception as e:
+        print("An error occurred:", str(e))
+        input()
