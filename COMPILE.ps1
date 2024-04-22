@@ -1,1 +1,1 @@
-./.venv/Scripts/pyinstaller --noconfirm --onefile --console --name "SoundSwitcher" --clean "./main.py"
+./.venv/Scripts/pyinstaller --noconfirm --onefile --console --name "Ava" --clean "./main.py"

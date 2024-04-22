@@ -1,0 +1,16 @@
+outputs = [
+    [
+        "Sennheiser 560S",
+        "Audio-Technica ATH-M20xBT",
+    ], [
+        "AudioRelay",
+        "Oculus",
+    ]
+]
+inputs = [
+    [
+        "Behringer",
+        "BOYA by-M1"
+    ]
+]
+set_communication_default = False
