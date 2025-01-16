@@ -1,5 +1,5 @@
-# Ava
-Ava is a tool that lets you change your sound input/output device quickly and easily!
+# SoundKey
+SoundKey is a tool that lets you change your sound input/output device quickly and easily!
 If you bind the exe to a hotkey, it will cycle through your manually set list of devices to the next currently available one.
 
 This works for both input and output devices with an option to set default communication device as well, thus retains all of the necessary functionality provided by all diff vanilla methods like "Volume Mixer", "Change System Sounds" and "Win+Ctrl+V".
@@ -19,10 +19,10 @@ TODO: hide admin window, CLI help
     - open `nircmd.exe` in the extracted folder
     - click `Copy to Windows Directory` then `Yes`
     - restart PC to ensure proper installation
-2. download and extract [this repo's contents](https://github.com/rakinishraq/ava/archive/refs/heads/master.zip)
+2. download and extract [this repo's contents](https://github.com/rakinishraq/SoundKey/archive/refs/heads/master.zip)
 3. open a Powershell window in this folder
-    - method 1: open Powershell from Windows menu and enter `cd C:/PATH/TO/AVA
-    - method 2: open from windows file explorer by shift-right click in an empty area in the Ava folder, click Open Powershell window here
+    - method 1: open Powershell from Windows menu and enter `cd C:/PATH/TO/SOUNDKEY
+    - method 2: open from windows file explorer by shift-right click in an empty area in the SoundKey folder, click Open Powershell window here
 4. Execute `python -m venv .venv` to create a virtual environment
 5. Install all the required module with `./.venv/Scripts/pip.exe install -r requirements.txt`
 6. Rename "config.py.example" to "config.py" (and edit with any text editor if desired)
@@ -86,12 +86,12 @@ options:
 - `./LAUNCH.vbs input` cycles combined group of `inputs[]`
 
 ### bind to shortcut
-this is how to bind Ava to a hotkey and make this start automatically when windows does
+this is how to bind SoundKey to a hotkey and make this start automatically when windows does
 
 1. install [AutoHotkey v2](https://www.autohotkey.com/download/ahk-v2.exe)
 2. open startup folder (win+R, type `shell:startup`, press enter)
 3. right click > create shortcut:
-    - target: `"C:\Program Files\AutoHotkey\v2\AutoHotkey64_UIA.exe" "C:\PATH\TO\AVA\shortcut.ahk"`
+    - target: `"C:\Program Files\AutoHotkey\v2\AutoHotkey64_UIA.exe" "C:\PATH\TO\SoundKey\shortcut.ahk"`
     - start in: `"C:\Program Files\AutoHotkey\v2"`
 4. open `shortcut.ahk` with a text editor (ex. right-click > open with > notepad)
 5. run `shortcut.ahk` to start the hotkey system in the background and test it
