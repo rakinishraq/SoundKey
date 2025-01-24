@@ -6,11 +6,13 @@ import ctypes
 import sys
 from time import sleep
 import os
+import traceback
+from win10toast import ToastNotifier
 
 if os.path.isfile('config.py'):
     import config
 chime.theme("material")
-
+toaster = ToastNotifier()
 
 
 def get_default(type):
@@ -102,6 +104,7 @@ def main(args=None):
 
         if get_default(args.type) != old_name:
             # Device changed: success
+            toaster.show_toast(new_name, args.type.upper(), duration=2)
             play_sound(success=True)
             break
         elif old_index == next_index:
@@ -120,4 +123,5 @@ if __name__ == "__main__":
         main(sys.argv[1:] if len(sys.argv) > 1 else default_args)
     except Exception as e:
         print("An error occurred:", str(e))
+        traceback.print_exc()
         input()
